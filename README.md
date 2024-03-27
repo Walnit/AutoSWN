@@ -7,19 +7,19 @@ Ideally, you should run this script every time you connect to SWN@SSOE for you t
 
 ## How to run
 ### Windows
-- In the Windows search box, search for "Powershell". Run it as administrator.
-- Run these commands by copying and pasting them into the terminal that opens up (there will be a prompt to change Execution Policy, answer Y):
+- In the Windows search box, search for "Powershell" and run it.
+- Run these commands by copying and pasting them into the terminal that opens up:
 ``` 
 if (Test-Path -Path ~/Desktop) {
   $DESKTOP_PATH = "$env:USERPROFILE\Desktop"
 } else {
   $DESKTOP_PATH = "$env:USERPROFILE\OneDrive\Desktop"
 }
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 curl.exe https://raw.githubusercontent.com/Walnit/AutoSWN/main/swn.ps1 | out-string | Out-File -FilePath "$DESKTOP_PATH\AutoSWN.ps1"
 Unblock-File -Path "$DESKTOP_PATH\AutoSWN.ps1"
 ```
-- A file named `AutoSWN.ps1` should appear on your desktop. To run the file, you can right click and choose "Run with Powershell" to run.
+- A file named `AutoSWN.ps1` should appear on your desktop. To run the file, you can **right click** and choose "Run with Powershell" to run.
 - Follow the instructions when you first run the file to set up authentication.
 ### Linux
 - From the files above, download `swn.sh`.
