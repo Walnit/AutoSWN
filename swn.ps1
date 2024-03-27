@@ -15,7 +15,7 @@ if (Test-Path "~/.swnconfig" -PathType Leaf) {
 		echo "Signed in!"
 	}
 } else {
-	echo "You have not configured AutoSWN! I will now open the configuration file at .$env:USERPROFILE\.swnconfig'." 
+	echo "You have not configured AutoSWN! I will now open the configuration file at '$env:USERPROFILE\.swnconfig'." 
 	echo "The first line should be your username, and the second line should be your password."
 	echo "For example,"
 	echo "<in .swnconfig>"
